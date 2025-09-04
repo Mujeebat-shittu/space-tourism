@@ -17,14 +17,14 @@ const Home = () => {
     return (
         <>
             <div className="relative w-screen min-h-screen overflow-hidden ">
-                <img
-                src="/assets/home-bg.svg"
-                alt="background"
+                <div
                     className={`bg-cover bg-center absolute inset-0 
         w-[100vw] lg:w-screen 
         min-h-screen h-screen 
         transform lg:transform-none 
-        rotate-90 lg:rotate-none overflow-hidden `}/>
+        rotate-90 lg:rotate-none overflow-hidden `}
+        style={{backgroundImage: "url(/assets/home-bg.svg)"}}
+        /></div>
 
 
                 {/* Fallback placeholder (while bg loads)
@@ -51,7 +51,6 @@ const Home = () => {
 
                 </div>
 
-            </div>
         </>
     )
 
