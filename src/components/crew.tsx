@@ -1,10 +1,5 @@
-// import BgImage from "/assets/render3.svg"
 import Header from "./header"
 import "../index.css"
-// import Commander from "/assets/commander.svg"
-// import Specialist from "/assets/specialist.svg"
-// import Pilot from "/assets/pilot.svg"
-// import Flight from "/assets/flight-engineer.svg"
 import { useParams, Link } from "react-router-dom"
 import { Dot } from "lucide-react"
 

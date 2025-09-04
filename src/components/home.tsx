@@ -1,33 +1,18 @@
 import Header from "../components/header"
 import "../index.css"
-// import { useState, useEffect } from "react";
 
 
 const Home = () => {
 
-    // const [loaded, setLoaded] = useState(false);
-
-    // useEffect(() => {
-    //     const img = new Image();
-    //     img.src = "/assets/home-bg.svg";
-    //     img.onload = () => setLoaded(true);
-    // }, []);
 
     return (
         <>
-            <div className="relative w-screen min-h-screen overflow-hidden ">
+            <div className="relative w-screen min-h-screen overflow-hidden bg-[#0B0D17]">
                 <div
-                    className={`bg-cover bg-center absolute inset-0 
-        w-[100vh] lg:w-screen 
-        min-h-screen h-screen 
-        transform lg:transform-none 
-        rotate-90 lg:rotate-none overflow-hidden
-        `}
-
+                    className={`bg-cover bg-center absolute inset-0 bg-[#0B0D17] 
+                   w-[100vh] lg:w-screen min-h-screen h-screen transform lg:transform-none rotate-90 lg:rotate-none overflow-hidden`}
                     style={{ backgroundImage: `url(/assets/home-bg.svg)` }}></div>
 
-                {/* Fallback placeholder (while bg loads)
-                <div className="absolute inset-0 bg-[#0B0D17]" /> */}
 
                 <Header />
 

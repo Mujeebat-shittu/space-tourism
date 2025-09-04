@@ -1,10 +1,5 @@
-// import BgImage from "/assets/render2.svg"
 import Header from "../components/header"
 import "../index.css"
-// import Moon from "/assets/moon.svg"
-// import Mars from "/assets/mars.svg"
-// import Europa from "/assets/europa.svg"
-// import Titan from "/assets/titan.svg"
 import { useParams, Link } from "react-router-dom"
 
 const Destination = () => {

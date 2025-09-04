@@ -6,10 +6,10 @@ import { NavLink } from "react-router-dom";
 
 
 const links = [
-  { name: "HOME", path: "/", end: true },
-  { name: "DESTINATION", path: "/destination/moon" },
-  { name: "CREW", path: "/crew/commander" },
-  { name: "TECHNOLOGY", path: "/technology/vehicle" },
+  { name: "00 HOME", path: "/", end: true },
+  { name: "01 DESTINATION", path: "/destination/moon" },
+  { name: "02 CREW", path: "/crew/commander" },
+  { name: "03 TECHNOLOGY", path: "/technology/vehicle" },
 ];
 
 function Header() {

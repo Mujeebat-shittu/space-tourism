@@ -1,11 +1,6 @@
-// import BgImage from "/assets/render4.svg"
 import Header from "../components/header"
 import "../index.css"
-// import Vehicle from "/assets/rocket.svg"
-// import Spaceport from "/assets/technology-image-b.svg"
-// import Capsule from "/assets/technology-image-c.svg"
 import { useParams, Link } from "react-router-dom"
-import { Dot } from "lucide-react"
 
 const Technology = () => {
 
@@ -37,62 +32,54 @@ const Technology = () => {
             <div className="relative w-screen min-h-screen overflow-hidden ">
                 <div
                     className=" bg-cover bg-center absolute inset-0 
-                      w-screen 
-                      min-h-screen h-screen 
-                      lg:transform-none 
-                      rotate-360  lg:rotate-none overflow-hidden"
-
+                      w-screen min-h-screen h-screen rotate-360  lg:rotate-none overflow-hidden"
                     style={{ backgroundImage: `url(/assets/render4.svg)` }}>
 
                 </div>
 
                 <Header />
 
-                <div className=" relative z-10 mx-auto flex flex-col lg:flex-row items-center justify-center h-screen text-[#D0D6F9] w-[70%] gap-10 lg:gap-20 text-center -top-15">
+                <div className=" relative z-10 text-[#D0D6F9] p-6 lg:px-16">
 
-                    <div className="flex flex-col gap-10">
+                      <div className="flex flex-row lg:flex-col items-center justify-center gap-10 h-full">
 
-                    <div className="">
-                        <img src={tech.image} alt={tech.title} className="w-[100vw] h-[300px]" />
-                    </div>
-
-                        <div className="flex flex-col gap-5">
-                            <h2 className="text-xl font-[Bellefair] lg:text-left text-center">{tech.title}</h2>
-                            <p className="max-w-[350px] text-center lg:text-left font-[Barlow_Regular]">{tech.description}</p>
-                        </div>
-
-                        <div className=" flex gap-10 items-center justify-center mb-6">
-                            {Object.keys(technologies).map((key) => {
+                        <div className=" flex lg:flex-2/3 flex-col lg:flex-row gap-10 items-center text-center lg:justify-start lg:text-left">
+                            <div className="flex flex-row lg:flex-col gap-10 items-center justify-center px-4 lg:px-0 overflow-visible">
+                            {Object.keys(technologies).map((key, index) => {
                                 const isActive = title === key
 
                                 return (
                                     <Link
                                         key={key}
                                         to={`/technology/${key}`}
-                                        className={`flex items-center gap-2 uppercase ${isActive ? "border-b-2 border-white text-white" : "text-gray-400"
+                                        className={`flex items-center justify-center text-[24px] gap-2 uppercase w-20 h-20 rounded-full border-2 
+                                            ${isActive ? "bg-white text-[#0B0D17]" : "text-white border-white bg-none"
                                             }`}
                                     >
-                                        {/* Dot with ring if active */}
-                                        <div className="relative flex items-center justify-center">
-                                            <Dot strokeWidth={10} size={20} className={`w-4 h-4 ${isActive ? "text-white" : "text-gray-400"}`} />
-                                            {isActive && (
-                                                <span className="absolute w-6 h-6 rounded-full border-2 border-white"></span>
-                                            )}
-                                        </div>
+                                        {/* nav number*/}
+                                            {index + 1}
                                     </Link>
                                 )
                             })}
 
+                            </div>
+                        <div className="flex flex-col gap-2 items-center justify-center">
+                            <h2 className="font-[Bellefair] text-2xl lg:text-left">THE TERMINOLOGY</h2>
+                            <h2 className="text-[40px] font-[Bellefair] lg:text-left text-center">{tech.title}</h2>
+                            <p className="max-w-[350px] text-center lg:text-left font-[Barlow_Regular]">{tech.description}</p>
                         </div>
+                        
+                    <div className="lg:flex-1/3 w-full">
+                        <img src={tech.image} alt={tech.title} className="lg:flex-1/3 w-full h-[400px] bg-cover"/>
                     </div>
 
 
+                        </div>
 
-
+                    </div>
 
                 </div>
-
-            </div>
+                </div>
         </>
     )
 
