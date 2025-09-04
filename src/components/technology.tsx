@@ -1,9 +1,9 @@
-import BgImage from "../assets/render4.svg"
+// import BgImage from "/assets/render4.svg"
 import Header from "../components/header"
 import "../index.css"
-import Vehicle from "../assets/rocket.svg"
-import Spaceport from "../assets/technology-image-b.svg"
-import Capsule from "../assets/technology-image-c.svg"
+// import Vehicle from "/assets/rocket.svg"
+// import Spaceport from "/assets/technology-image-b.svg"
+// import Capsule from "/assets/technology-image-c.svg"
 import { useParams, Link } from "react-router-dom"
 import { Dot } from "lucide-react"
 
@@ -11,17 +11,17 @@ const Technology = () => {
 
     const technologies = {
         vehicle: {
-            image: Vehicle,
+            image: "/assets/rocket.svg",
             title: "LAUNCH VEHICLE",
             description:"A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!"
         },
         spaceport: {
-            image: Spaceport,
+            image: "/assets/technology-image-b.svg",
             title: "SPACEPORT",
             description: "A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth's rotation for launch."
         },
         capsule: {
-            image: Capsule,
+            image: "/assets/technology-image-c.svg",
             title: "SPACE CAPSULE",
             description: "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained."
         }
@@ -42,7 +42,7 @@ const Technology = () => {
                       lg:transform-none 
                       rotate-360  lg:rotate-none overflow-hidden"
 
-                    style={{ backgroundImage: `url(${BgImage})` }}>
+                    style={{ backgroundImage: `url(/assets/render4.svg)` }}>
 
                 </div>
 

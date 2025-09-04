@@ -27,10 +27,3 @@
   overflow: hidden;
 }
 
-@media (min-width: 690px) and (max-width: 768px) {
-  .main {
-    width: 100vh;
-    min-height: 100vh;
-    transform: rotate(90deg);
-  }
-}
