@@ -68,7 +68,7 @@ function Header() {
 
       {/* nav mobile */}
 
-      <div className={` ${toggle ? "flex" : "hidden"} flex flex-col p-4 justify-between items-center my-5 transition-[0.5s height ease-in-out] h-[100%] fixed w-[50%] -top-5 bg-[#0B0D1726] right-0 z-20 `}>
+      <div className={` ${toggle ? "flex" : "hidden"} flex flex-col p-4 justify-between items-center my-5 transition-[0.5s height ease-in-out] h-[100%] fixed w-[50%] -top-5 bg-[#0B0D1726] right-0 z-20 backdrop-blur-lg`}>
 
         <div className="">
           <div className="self-end absolute right-10 top-4 " onClick={toggleMenu}>
