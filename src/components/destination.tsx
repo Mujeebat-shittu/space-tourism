@@ -52,7 +52,7 @@ const Destination = () => {
 
                 <Header />
 
-                <div className=" relative z-10 mx-auto flex flex-col lg:flex-row items-center justify-center h-screen text-[#D0D6F9] w-[70%] gap-10 lg:gap-20 text-center -top-15">
+                <div className=" relative z-10 mx-auto flex flex-col lg:flex-row items-center justify-center min-h-screen text-[#D0D6F9] w-[70%] gap-10 lg:gap-20 text-center -top-15">
                     <div className="w-[200px] lg:w-[500px]">
                         <img src={destination.image} alt={destination.place} />
                     </div>

@@ -6,10 +6,10 @@ import { NavLink } from "react-router-dom";
 
 
 const links = [
-  { name: "00 HOME", path: "/", end: true },
-  { name: "01 DESTINATION", path: "/destination/moon" },
-  { name: "02 CREW", path: "/crew/commander" },
-  { name: "03 TECHNOLOGY", path: "/technology/vehicle" },
+  { name: "HOME", path: "/", end: true },
+  { name: "DESTINATION", path: "/destination/moon" },
+  { name: "CREW", path: "/crew/commander" },
+  { name: "TECHNOLOGY", path: "/technology/vehicle" },
 ];
 
 function Header() {
@@ -22,7 +22,7 @@ function Header() {
 
 
   return (
-    <header className="relative z-[100] -top-2 flex items-center justify-between mx-auto p-6 h-[70px] w-full bg-[#0b0d1526] ">
+    <header className="relative z-[100] gap-10 -top-4 flex items-center justify-between mx-auto p-4 h-fit w-full]">
       <div
         className="icons flex items-center justify-center absolute right-0 lg:hidden mr-6"
         onClick={toggleMenu}
@@ -31,30 +31,33 @@ function Header() {
       </div>
 
       <div>
-        <img src={Logo} alt="Logo" className="" />
+        <img src={Logo} alt="Logo" className="w-[40px]" />
       </div>
 
       {/* nav desktop */}
-
-      <div className="hidden lg:flex flex-row p-4 gap-2 justify-between items-end text-white bg-[#0B0D1726]">
-        <div className="flex items-center justify-center">
-          <img src={Line} alt="" className="w-[90%]" />
-        </div>
-        <div className="flex items-center justify-center">
-          <ul className="flex flex-row gap-4 cursor-pointer">
-            {links.map((link) => (
+      <div className="flex items-center justify-center">
+        <img src={Line} alt="" className="w-[80%] hidden xl:flex" />
+      </div>
+      <div className="hidden lg:flex flex-row px-6 py-4 gap-2 justify-between items-center text-white h-[80px] bg-[rgba(255,255,255,0.06)] w-[100%] mx-auto">
+        <div className="flex items-end justify-center mx-auto">
+          <ul className="flex flex-row gap-10 cursor-pointer">
+            {links.map((link, index) => (
               <li key={link.name}>
                 <NavLink
                   to={link.path}
                   end={link.end}
                   className={({ isActive }) =>
                     `relative pb-1 capitalize ${isActive
-                      ? "text-[var(--dark-grayish-blue)] after:content-[''] after:absolute after:left-0 after:top-4 after:w-full after:h-[3px] after:bg-[#fff]"
+                      ? "text-[var(--dark-grayish-blue)] after:content-[''] after:absolute after:left-0 after:top-5 after:w-full after:h-[1px] after:bg-[#fff] after:pb-2 gap-4"
                       : "text-white"
                     }`
                   }
                 >
-                  {link.name}
+                  <div className="flex gap-2">
+                    <span className="font-bold">0{index}</span>
+                    <span className="font-[400]">{link.name}</span>
+                  </div>
+
                 </NavLink>
               </li>
             ))}
@@ -68,14 +71,14 @@ function Header() {
 
       {/* nav mobile */}
 
-      <div className={` ${toggle ? "flex" : "hidden"} flex flex-col p-4 justify-between items-center my-5 transition-[0.5s height ease-in-out] h-[100%] fixed w-[50%] -top-5 bg-[#0B0D1726] right-0 z-20 backdrop-blur-lg`}>
+      <div className={` ${toggle ? "flex" : "hidden"} flex flex-col p-4 justify-between items-center my-5 transition-[0.5s height ease-in-out] h-[100%] fixed w-[70%] -top-5 bg-[#0B0D1726] right-0 z-20 backdrop-blur-lg`}>
 
         <div className="">
           <div className="self-end absolute right-10 top-4 " onClick={toggleMenu}>
-            <X 
-            size={30} 
-            strokeWidth={3} 
-            className="cursor-pointer text-white"
+            <X
+              size={30}
+              strokeWidth={3}
+              className="cursor-pointer text-white"
             />
           </div>
           <ul className="flex flex-col p-4 m-4 my-10 gap-4 cursor-pointer font-semibold text-lg">
@@ -90,7 +93,7 @@ function Header() {
                       : "text-gray-300"
                     }`
                   }
-                 onClick={toggleMenu} // close menu when clicking
+                  onClick={toggleMenu} // close menu when clicking
                 >
                   {link.name}
                 </NavLink>

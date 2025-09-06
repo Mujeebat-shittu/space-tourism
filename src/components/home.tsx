@@ -1,8 +1,15 @@
 import Header from "../components/header"
 import "../index.css"
+import { useNavigate } from "react-router-dom"
 
 
 const Home = () => {
+    const navigate = useNavigate()
+
+    const explore = (e: React.MouseEvent) => {
+        e.preventDefault();
+        navigate ("/destination")
+    }
 
 
     return (
@@ -17,7 +24,7 @@ const Home = () => {
                 <Header />
 
 
-                <div className=" relative mx-auto flex flex-col lg:grid lg:grid-cols-2 items-center min-h-screen justify-center text-[#D0D6F9] w-[70%] gap-10 text-center lg:text-left -top-15 lg:top-0 lg:mr-5">
+                <div className=" relative mx-auto flex flex-col lg:grid lg:grid-cols-2 items-center h-screen justify-center text-[#D0D6F9] w-[70%] gap-10 text-center lg:text-left -top-15 lg:-top-10 lg:mr-5">
                     <div className="flex gap-10 flex-col">
                         <p className="tracking-wider font-[Barlow_Condensed] text-2xl">SO. YOU WANT TO TRAVEL TO </p>
                         <h1 className="text-6xl font-[Barlow_Regular] ">SPACE</h1>
@@ -28,8 +35,10 @@ const Home = () => {
                         </p>
                     </div>
 
-                    <div className="">
-                        <button className="bg-white rounded-full w-40 lg:w-60 lg:h-60 h-40 text-[#0B0D17] text-2xl px-4 ">EXPLORE</button>
+                    <div className="animate-dissolve duration-300 ease-out">
+                        <button
+                        onClick={explore}
+                         className="bg-white rounded-full w-40 lg:w-60 lg:h-60 h-40 text-[#0B0D17] text-2xl px-4 cursor-pointer ">EXPLORE</button>
 
                     </div>
 

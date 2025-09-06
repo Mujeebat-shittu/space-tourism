@@ -29,7 +29,7 @@ const Technology = () => {
 
     return (
         <>
-            <div className="relative w-screen min-h-screen overflow-hidden ">
+            <div className="relative w-screen min-h-screen overflow-hidden">
                 <div
                     className=" bg-cover bg-center absolute inset-0 
                       w-screen min-h-screen h-screen rotate-360  lg:rotate-none overflow-hidden"
@@ -39,9 +39,9 @@ const Technology = () => {
 
                 <Header />
 
-                <div className=" relative z-10 text-[#D0D6F9] p-6 lg:px-16">
+                <div className=" relative z-10 text-[#D0D6F9] h-screen p-6 lg:px-16">
 
-                      <div className="flex flex-row lg:flex-col items-center justify-center gap-10 h-full">
+                      <div className="flex flex-row lg:flex-col items-center justify-center gap-10 h-auto">
 
                         <div className=" flex lg:flex-2/3 flex-col lg:flex-row gap-10 items-center text-center lg:justify-start lg:text-left">
                             <div className="flex flex-row lg:flex-col gap-10 items-center justify-center px-4 lg:px-0 overflow-visible">
