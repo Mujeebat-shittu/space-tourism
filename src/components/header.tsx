@@ -82,20 +82,23 @@ function Header() {
             />
           </div>
           <ul className="flex flex-col p-4 m-4 my-10 gap-4 cursor-pointer font-semibold text-lg">
-            {links.map((link) => (
+            {links.map((link, index) => (
               <li key={link.name}>
                 <NavLink
                   to={link.path}
                   end={link.end}
                   className={({ isActive }) =>
-                    `relative pb-1 capitalize ${isActive
+                    `relative block pb-1 capitalize ${isActive
                       ? "text-white after:content-[''] after:absolute after:right-0 after:top-0 after:h-full after:w-[3px] after:bg-[#fff] gap-5 pr-4"
                       : "text-gray-300"
                     }`
                   }
                   onClick={toggleMenu} // close menu when clicking
                 >
-                  {link.name}
+                  <div className="flex gap-2">
+                    <span className="font-bold">0{index}</span>
+                    <span className="font-[400]">{link.name}</span>
+                  </div>
                 </NavLink>
               </li>
             ))}

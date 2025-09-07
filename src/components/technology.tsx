@@ -29,7 +29,7 @@ const Technology = () => {
 
     return (
         <>
-            <div className="relative w-screen min-h-screen overflow-hidden">
+            <div className="relative w-screen min-h-screen overflow-hidden bg-[#0B0D17]">
                 <div
                     className=" bg-cover bg-center absolute inset-0 
                       w-screen min-h-screen h-screen rotate-360  lg:rotate-none overflow-hidden"
