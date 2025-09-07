@@ -18,7 +18,7 @@ const Home = () => {
                 <div
                     className={`bg-cover bg-center absolute inset-0 bg-[#0B0D17] 
                    w-[100vh] lg:w-screen min-h-screen h-screen transform lg:transform-none rotate-90 lg:rotate-none overflow-hidden`}
-                    style={{ backgroundImage: `url(/assets/home-bg.svg)` }}></div>
+                    style={{ backgroundImage: `url(/assets/home-bg.webp)` }}></div>
 
 
                 <Header />

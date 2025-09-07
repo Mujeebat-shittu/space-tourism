@@ -3,7 +3,7 @@
 // import Crew from "./components/crew"
 // import Technology from "./components/technology";
 
-import { Navigate, BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Navigate, BrowserRouter, Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
 
 const Home = lazy(() => import("./components/home"));
@@ -13,7 +13,7 @@ const Technology = lazy(() => import("./components/technology"));
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Suspense fallback={<div className="text-white">Loading...</div>}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -25,7 +25,7 @@ function App() {
           <Route path="/technology/:title" element={<Technology />} />
         </Routes>
       </Suspense>
-    </Router>
+    </BrowserRouter>
   );
 }
 

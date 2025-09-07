@@ -47,7 +47,7 @@ const Crew = () => {
                       lg:transform-none 
                       rotate-360  lg:rotate-none overflow-hidden"
 
-                    style={{ backgroundImage: `url(/assets/render3.svg)` }}>
+                    style={{ backgroundImage: `url(/assets/render3.webp)` }}>
 
                 </div>
 

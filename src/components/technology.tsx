@@ -33,7 +33,7 @@ const Technology = () => {
                 <div
                     className=" bg-cover bg-center absolute inset-0 
                       w-screen min-h-screen h-screen rotate-360  lg:rotate-none overflow-hidden"
-                    style={{ backgroundImage: `url(/assets/render4.svg)` }}>
+                    style={{ backgroundImage: `url(/assets/render4.webp)` }}>
 
                 </div>
 
