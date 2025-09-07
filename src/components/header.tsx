@@ -47,8 +47,8 @@ function Header() {
                   to={link.path}
                   end={link.end}
                   className={({ isActive }) =>
-                    `relative pb-1 capitalize ${isActive
-                      ? "text-[var(--dark-grayish-blue)] after:content-[''] after:absolute after:left-0 after:top-5 after:w-full after:h-[1px] after:bg-[#fff] after:pb-2 gap-4"
+                    `relative block pb-6 capitalize ${isActive
+                      ? "text-[var(--dark-grayish-blue)] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:bg-[#fff]"
                       : "text-white"
                     }`
                   }

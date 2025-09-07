@@ -39,6 +39,12 @@ const Technology = () => {
 
                 <Header />
 
+                 <div className="relative z-10 flex justify-center lg:justify-start lg:items-start gap-3 text-[20px] font-[Barlow_Condensed] px-6 lg:ml-26">
+                    <span className="text-[rgba(255,255,255,0.6)]">03</span>
+                    <span className="text-white">SPACE LAUNCH 101</span>
+                  </div>
+
+
                 <div className=" relative z-10 text-[#D0D6F9] h-screen p-6 lg:px-16">
 
                       <div className="flex flex-row lg:flex-col items-center justify-center gap-10 h-auto">
@@ -52,7 +58,7 @@ const Technology = () => {
                                     <Link
                                         key={key}
                                         to={`/technology/${key}`}
-                                        className={`flex items-center justify-center text-[24px] gap-2 uppercase w-20 h-20 rounded-full border-2 
+                                        className={`flex items-center justify-center text-[24px] gap-2 uppercase w-17 h-17 rounded-full border-2 
                                             ${isActive ? "bg-white text-[#0B0D17]" : "text-white border-white bg-none"
                                             }`}
                                     >
@@ -63,10 +69,10 @@ const Technology = () => {
                             })}
 
                             </div>
-                        <div className="flex flex-col gap-2 items-center justify-center">
+                        <div className="flex flex-col gap-2 items-center lg:items-start justify-center">
                             <h2 className="font-[Bellefair] text-2xl lg:text-left">THE TERMINOLOGY</h2>
                             <h2 className="text-[40px] font-[Bellefair] lg:text-left text-center">{tech.title}</h2>
-                            <p className="max-w-[350px] text-center lg:text-left font-[Barlow_Regular]">{tech.description}</p>
+                            <p className="max-w-[350px] text-center lg:text-left font-[Barlow_Regular] text-lg">{tech.description}</p>
                         </div>
                         
                     <div className="lg:flex-1/3 w-full">
