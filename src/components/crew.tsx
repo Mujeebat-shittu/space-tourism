@@ -50,14 +50,14 @@ const Crew = () => {
 
                 <Header />
 
-                <div className="relative z-10 flex justify-center lg:justify-start lg:items-start gap-3 text-[20px] font-[Barlow_Condensed] px-6 lg:ml-32">
+                <div className=" relative z-10 flex justify-center lg:justify-start lg:items-start gap-5 text-[20px] font-[Barlow_Condensed] px-6 lg:ml-32">
                     <span className="text-[rgba(255,255,255,0.6)]">02</span>
                     <span className="text-white">MEET YOUR CREW</span>
                 </div>
 
-                <div className=" relative z-10 mx-auto flex flex-col lg:flex-row items-center justify-center min-h-screen text-[#D0D6F9] w-[70%] gap-10 lg:gap-20 text-center -top-15">
+                <div className=" relative z-10 mx-auto flex flex-col lg:flex-row lg:items-center min-h-screen text-[#D0D6F9] w-[70%] gap-10 lg:gap-20 text-center top-8 lg:-top-35">
 
-                    <div className="flex flex-col gap-10">
+                    <div className="flex flex-col gap-10 mx-auto">
 
                         <div className="flex flex-col gap-5">
                             <h2 className="text-xl font-[Bellefair] lg:text-left text-center">{crew.title}</h2>
@@ -89,7 +89,7 @@ const Crew = () => {
 
                         </div>
                     </div>
-                    <div className="w-[200px] lg:w-[500px]">
+                    <div className="w-[200px] lg:w-[500px] mx-auto">
                         <img src={crew.image} alt={crew.title} />
                     </div>
 

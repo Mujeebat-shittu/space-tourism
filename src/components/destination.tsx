@@ -42,11 +42,11 @@ const Destination = () => {
 
     return (
         <>
-            <div className="relative w-screen min-h-screen overflow-hidden bg-[#0B0D17]">
+            <div className="relative w-screen min-h-screen overflow-x-hidden bg-[#0B0D17]">
                 <img
                     src="/assets/render2.webp"
-                    className=" bg-cover bg-center absolute inset-0 
-                      w-screen min-h-screen h-screen overflow-hidden"/>
+                    className=" object-cover bg-center absolute inset-0 
+                      w-full h-full"/>
 
                 <Header />
 
@@ -55,12 +55,12 @@ const Destination = () => {
                     <span className="text-white">PICK YOUR DESTINATION</span>
                 </div>
 
-                <div className=" relative z-10 mx-auto flex flex-col lg:flex-row items-center justify-center min-h-screen text-[#D0D6F9] max-w-[100%] gap-10 lg:gap-20 text-center -top-20">
-                    <div className="w-[200px] lg:w-[300px]">
+                <div className=" relative z-10 mx-auto flex flex-col lg:items-center lg:justify-center lg:flex-row min-h-screen text-[#D0D6F9] max-w-[100%] gap-10 lg:gap-20 text-center -top-5 lg:-top-20">
+                    <div className="w-[200px] lg:w-[350px] mx-auto">
                         <img src={destination.image} alt={destination.place} />
                     </div>
 
-                    <div className="flex flex-col lg:items-start">
+                    <div className="flex flex-col lg:items-start mx-auto">
                         <div className=" flex gap-10 items-center justify-center mb-6">
                             {Object.keys(destinations).map((key) => (
                                 <Link
