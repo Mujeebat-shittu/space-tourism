@@ -22,7 +22,7 @@ function Header() {
 
 
   return (
-    <header className="relative z-[100] gap-10 -top-4 flex items-center justify-between mx-auto p-4 h-fit w-full]">
+    <header className="relative z-[100] gap-10 -top-4 flex items-center justify-between mx-auto p-4 h-fit w-full] py-8">
       <div
         className="icons flex items-center justify-center absolute right-0 lg:hidden mr-6"
         onClick={toggleMenu}

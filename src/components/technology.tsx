@@ -8,7 +8,7 @@ const Technology = () => {
         vehicle: {
             image: "/assets/rocket.svg",
             title: "LAUNCH VEHICLE",
-            description:"A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!"
+            description: "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!"
         },
         spaceport: {
             image: "/assets/technology-image-b.svg",
@@ -29,55 +29,54 @@ const Technology = () => {
 
     return (
         <>
-            <div className="relative w-screen min-h-screen overflow-hidden bg-[#0B0D17]">
-                <div
+            <div className="relative w-screen min-h-screen bg-[#0B0D17]">
+                <img
+                    src="/assets/render4.webp"
                     className=" bg-cover bg-center absolute inset-0 
-                      w-screen min-h-screen h-screen rotate-360  lg:rotate-none overflow-hidden"
-                    style={{ backgroundImage: `url(/assets/render4.webp)` }}>
+                      w-screen min-h-screen h-screen rotate-360  lg:rotate-none overflow-hidden"/>
 
-                </div>
 
                 <Header />
 
-                 <div className="relative z-10 flex justify-center lg:justify-start lg:items-start gap-3 text-[20px] font-[Barlow_Condensed] px-6 lg:ml-26">
+                <div className="relative z-10 flex justify-center lg:justify-start lg:items-start gap-3 text-[20px] font-[Barlow_Condensed] px-6 lg:ml-26">
                     <span className="text-[rgba(255,255,255,0.6)]">03</span>
                     <span className="text-white">SPACE LAUNCH 101</span>
-                  </div>
+                </div>
 
 
-                <div className=" relative z-10 text-[#D0D6F9] h-screen p-6 lg:px-16">
-
-                      <div className="flex flex-row lg:flex-col items-center justify-center gap-10 h-auto">
+                <div className=" relative z-10 text-[#D0D6F9] min-h-screen p-6 lg:px-16">
+                    
+                    <div className="flex flex-row lg:flex-col items-center justify-center gap-10 h-auto">
 
                         <div className=" flex lg:flex-2/3 flex-col lg:flex-row gap-10 items-center text-center lg:justify-start lg:text-left">
                             <div className="flex flex-row lg:flex-col gap-10 items-center justify-center px-4 lg:px-0 overflow-visible">
-                            {Object.keys(technologies).map((key, index) => {
-                                const isActive = title === key
+                                {Object.keys(technologies).map((key, index) => {
+                                    const isActive = title === key
 
-                                return (
-                                    <Link
-                                        key={key}
-                                        to={`/technology/${key}`}
-                                        className={`flex items-center justify-center text-[24px] gap-2 uppercase w-17 h-17 rounded-full border-2 
+                                    return (
+                                        <Link
+                                            key={key}
+                                            to={`/technology/${key}`}
+                                            className={`flex items-center justify-center text-[24px] gap-2 uppercase w-17 h-17 rounded-full border-2 
                                             ${isActive ? "bg-white text-[#0B0D17]" : "text-white border-white bg-none"
-                                            }`}
-                                    >
-                                        {/* nav number*/}
+                                                }`}
+                                        >
+                                            {/* nav number*/}
                                             {index + 1}
-                                    </Link>
-                                )
-                            })}
+                                        </Link>
+                                    )
+                                })}
 
                             </div>
-                        <div className="flex flex-col gap-2 items-center lg:items-start justify-center">
-                            <h2 className="font-[Bellefair] text-2xl lg:text-left">THE TERMINOLOGY</h2>
-                            <h2 className="text-[40px] font-[Bellefair] lg:text-left text-center">{tech.title}</h2>
-                            <p className="max-w-[350px] text-center lg:text-left font-[Barlow_Regular] text-lg">{tech.description}</p>
-                        </div>
-                        
-                    <div className="lg:flex-1/3 w-full">
-                        <img src={tech.image} alt={tech.title} className="lg:flex-1/3 w-full h-[400px] bg-cover"/>
-                    </div>
+                            <div className="flex flex-col gap-2 items-center lg:items-start justify-center">
+                                <h2 className="font-[Bellefair] text-2xl lg:text-left">THE TERMINOLOGY</h2>
+                                <h2 className="text-[40px] font-[Bellefair] lg:text-left text-center">{tech.title}</h2>
+                                <p className="max-w-[350px] text-center lg:text-left font-[Barlow_Regular] text-lg">{tech.description}</p>
+                            </div>
+
+                            <div className="lg:flex-1/3 w-full">
+                                <img src={tech.image} alt={tech.title} className="lg:flex-1/3 w-full h-[400px] bg-cover" />
+                            </div>
 
 
                         </div>
@@ -85,7 +84,7 @@ const Technology = () => {
                     </div>
 
                 </div>
-                </div>
+            </div>
         </>
     )
 

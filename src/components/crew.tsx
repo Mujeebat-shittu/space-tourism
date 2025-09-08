@@ -39,24 +39,21 @@ const Crew = () => {
 
     return (
         <>
-            <div className="relative w-screen min-h-screen overflow-hidden bg-[#0B0D17]">
-                <div
+            <div className="relative w-screen min-h-screen overflow-x-hidden bg-[#0B0D17]">
+                <img
+                    src="/assets/render3.webp"
                     className=" bg-cover bg-center absolute inset-0 
                       w-screen 
                       min-h-screen h-screen 
                       lg:transform-none 
-                      rotate-360  lg:rotate-none overflow-hidden"
-
-                    style={{ backgroundImage: `url(/assets/render3.webp)` }}>
-
-                </div>
+                      rotate-360  lg:rotate-none overflow-hidden"/>
 
                 <Header />
 
                 <div className="relative z-10 flex justify-center lg:justify-start lg:items-start gap-3 text-[20px] font-[Barlow_Condensed] px-6 lg:ml-32">
                     <span className="text-[rgba(255,255,255,0.6)]">02</span>
                     <span className="text-white">MEET YOUR CREW</span>
-                  </div>
+                </div>
 
                 <div className=" relative z-10 mx-auto flex flex-col lg:flex-row items-center justify-center min-h-screen text-[#D0D6F9] w-[70%] gap-10 lg:gap-20 text-center -top-15">
 

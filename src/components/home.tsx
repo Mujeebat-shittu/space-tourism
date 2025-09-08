@@ -14,7 +14,7 @@ const Home = () => {
 
     return (
         <>
-            <div className="relative w-screen min-h-screen overflow-hidden bg-[#0B0D17]">
+            <div className="relative w-screen min-h-screen overflow-x-hidden bg-[#0B0D17]">
                 <div
                     className={`bg-cover bg-center absolute inset-0 
                    w-[100vh] lg:w-screen min-h-screen h-screen transform lg:transform-none rotate-90 lg:rotate-none overflow-hidden`}
@@ -35,7 +35,7 @@ const Home = () => {
                         </p>
                     </div>
 
-                    <div className="animate-dissolve duration-300 ease-out">
+                    <div className="transition-opacity opacity-100 hover:opacity-80 active:opacity-70 duration-300 ease-out">
                         <button
                         onClick={explore}
                          className="bg-white rounded-full w-40 lg:w-60 lg:h-60 h-40 text-[#0B0D17] text-2xl px-4 cursor-pointer ">EXPLORE</button>

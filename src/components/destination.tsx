@@ -43,21 +43,19 @@ const Destination = () => {
     return (
         <>
             <div className="relative w-screen min-h-screen overflow-hidden bg-[#0B0D17]">
-                <div
+                <img
+                    src="/assets/render2.webp"
                     className=" bg-cover bg-center absolute inset-0 
-                      w-screen min-h-screen h-screen overflow-hidden"
-
-                    style={{ backgroundImage: `url(/assets/render2.webp)` }}>
-                </div>
+                      w-screen min-h-screen h-screen overflow-hidden"/>
 
                 <Header />
 
                 <div className="relative z-10 flex justify-center lg:justify-start lg:items-start gap-3 text-[20px] font-[Barlow_Condensed] px-6 lg:ml-16">
                     <span className="text-[rgba(255,255,255,0.6)]">01</span>
                     <span className="text-white">PICK YOUR DESTINATION</span>
-                  </div>
+                </div>
 
-                <div className=" relative z-10 mx-auto flex flex-col lg:flex-row items-center justify-center min-h-screen text-[#D0D6F9] max-w-[100%] gap-10 lg:gap-20 text-center -top-15">
+                <div className=" relative z-10 mx-auto flex flex-col lg:flex-row items-center justify-center min-h-screen text-[#D0D6F9] max-w-[100%] gap-10 lg:gap-20 text-center -top-20">
                     <div className="w-[200px] lg:w-[300px]">
                         <img src={destination.image} alt={destination.place} />
                     </div>
@@ -91,7 +89,7 @@ const Destination = () => {
 
                             </div>
                             <div className="">
-                                 <h2 className="font-[Barlow_Condensed]">EST. TRAVEL TIME</h2>
+                                <h2 className="font-[Barlow_Condensed]">EST. TRAVEL TIME</h2>
                                 <h2 className="font-[Bellefair] text-2xl">{destination.tt}</h2>
 
                             </div>
