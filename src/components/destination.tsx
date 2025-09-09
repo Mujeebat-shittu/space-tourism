@@ -42,11 +42,9 @@ const Destination = () => {
 
     return (
         <>
-            <div className="relative w-screen min-h-screen overflow-x-hidden bg-[#0B0D17]">
-                <img
-                    src="/assets/render2.webp"
-                    className=" object-cover bg-center absolute inset-0 
-                      w-full h-full"/>
+            
+            <div className="relative w-full min-h-screen bg-[#0B0D17] bg-cover bg-center"
+                style={{ backgroundImage: "url('/assets/render2.webp')" }}>
 
                 <Header />
 
@@ -55,12 +53,12 @@ const Destination = () => {
                     <span className="text-white">PICK YOUR DESTINATION</span>
                 </div>
 
-                <div className=" relative z-10 mx-auto flex flex-col lg:items-center lg:justify-center lg:flex-row min-h-screen text-[#D0D6F9] max-w-[100%] gap-10 lg:gap-20 text-center -top-5 lg:-top-20">
+                <div className=" relative z-10 mx-auto flex flex-col lg:items-center lg:justify-center lg:flex-row text-[#D0D6F9] max-w-[100%] gap-10 text-center -top-5 lg:-top-0">
                     <div className="w-[200px] lg:w-[350px] mx-auto">
                         <img src={destination.image} alt={destination.place} />
                     </div>
 
-                    <div className="flex flex-col lg:items-start mx-auto">
+                    <div className="flex flex-col lg:items-start mx-auto lg:max-w-[500px]">
                         <div className=" flex gap-10 items-center justify-center mb-6">
                             {Object.keys(destinations).map((key) => (
                                 <Link
@@ -82,18 +80,20 @@ const Destination = () => {
 
                         <div className="w-full h-0.5 bg-white my-4 lg:mx-0 mx-auto flex items-center justify-center"></div>
 
+                        {/* Distance and estimated time  */}
                         <div className="flex flex-row gap-10 mx-auto lg:mx-0 text-left">
                             <div className="">
                                 <h2 className="font-[Barlow_Condensed]">AVG. DISTANCE</h2>
                                 <h2 className="font-[Bellefair] text-2xl">{destination.distance}</h2>
-
                             </div>
+
                             <div className="">
                                 <h2 className="font-[Barlow_Condensed]">EST. TRAVEL TIME</h2>
                                 <h2 className="font-[Bellefair] text-2xl">{destination.tt}</h2>
 
                             </div>
                         </div>
+
                     </div>
 
 

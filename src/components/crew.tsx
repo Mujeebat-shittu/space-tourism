@@ -39,14 +39,9 @@ const Crew = () => {
 
     return (
         <>
-            <div className="relative w-screen min-h-screen overflow-x-hidden bg-[#0B0D17]">
-                <img
-                    src="/assets/render3.webp"
-                    className=" bg-cover bg-center absolute inset-0 
-                      w-screen 
-                      min-h-screen h-screen 
-                      lg:transform-none 
-                      rotate-360  lg:rotate-none overflow-hidden"/>
+
+            <div className="relative w-full min-h-screen bg-[#0B0D17] bg-cover bg-center"
+                style={{ backgroundImage: "url('/assets/render3.webp')" }}>
 
                 <Header />
 
@@ -55,7 +50,7 @@ const Crew = () => {
                     <span className="text-white">MEET YOUR CREW</span>
                 </div>
 
-                <div className=" relative z-10 mx-auto flex flex-col lg:flex-row lg:items-center min-h-screen text-[#D0D6F9] w-[70%] gap-10 lg:gap-20 text-center top-8 lg:-top-35">
+                <div className=" relative z-10 mx-auto flex flex-col lg:flex-row lg:items-center text-[#D0D6F9] lg:w-[70%] gap-10 lg:gap-20 text-center top-8 lg:top-15 xl:top-20">
 
                     <div className="flex flex-col gap-10 mx-auto">
 
@@ -73,7 +68,7 @@ const Crew = () => {
                                     <Link
                                         key={key}
                                         to={`/crew/${key}`}
-                                        className={`flex items-center gap-2 uppercase ${isActive ? "border-b-2 border-white text-white" : "text-gray-400"
+                                        className={`flex items-center gap-2 uppercase ${isActive ? "text-white" : "text-gray-400"
                                             }`}
                                     >
                                         {/* Dot with ring if active */}
@@ -89,7 +84,7 @@ const Crew = () => {
 
                         </div>
                     </div>
-                    <div className="w-[200px] lg:w-[500px] mx-auto">
+                    <div className="w-[200px] lg:w-[400px] mx-auto">
                         <img src={crew.image} alt={crew.title} />
                     </div>
 

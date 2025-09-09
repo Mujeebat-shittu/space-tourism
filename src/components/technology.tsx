@@ -29,26 +29,27 @@ const Technology = () => {
 
     return (
         <>
-            <div className="relative w-screen min-h-screen bg-[#0B0D17]">
-                <img
-                    src="/assets/render4.webp"
-                    className=" object-cover absolute inset-0 
-                      w-full h-full rotate-360  lg:rotate-none overflow-x-hidden"/>
-
+            <div className="relative w-full min-h-screen bg-[#0B0D17] bg-cover bg-center"
+                style={{ backgroundImage: "url('/assets/render4.webp')" }}>
 
                 <Header />
 
+                {/* content header */}
                 <div className="relative z-10 flex justify-center lg:justify-start lg:items-start gap-3 text-[20px] font-[Barlow_Condensed] px-6 lg:ml-26">
                     <span className="text-[rgba(255,255,255,0.6)]">03</span>
                     <span className="text-white">SPACE LAUNCH 101</span>
                 </div>
 
+                {/* text and image wrapper */}
+                <div className=" relative z-10 text-[#D0D6F9] p-6 lg:px-16">
 
-                <div className=" relative z-10 text-[#D0D6F9] min-h-screen p-6 lg:px-16">
+                    <div className="flex flex-col lg:flex-row items-center justify-center gap-10 h-auto">
+                        <div className=" flex flex-col lg:flex-row gap-10 items-center text-center lg:text-left">
 
-                    <div className="flex flex-row lg:flex-col gap-10 h-auto">
+                            <div className="w-auto mx-auto lg:order-2">
+                                <img src={tech.image} alt={tech.title} className="lg:flex-1/3 w-[80%] h-auto lg:h-[400px] mx-auto" />
+                            </div>
 
-                        <div className=" flex lg:flex-2/3 flex-col lg:flex-row gap-10 items-center text-center lg:justify-start lg:text-left">
                             <div className="flex flex-row lg:flex-col gap-10 items-center justify-center px-4 lg:px-0 overflow-visible">
                                 {Object.keys(technologies).map((key, index) => {
                                     const isActive = title === key
@@ -68,15 +69,13 @@ const Technology = () => {
                                 })}
 
                             </div>
+
                             <div className="flex flex-col gap-2 items-center lg:items-start justify-center">
                                 <h2 className="font-[Bellefair] text-2xl lg:text-left">THE TERMINOLOGY</h2>
                                 <h2 className="text-[40px] font-[Bellefair] lg:text-left text-center">{tech.title}</h2>
                                 <p className="max-w-[350px] text-center lg:text-left font-[Barlow_Regular] text-lg">{tech.description}</p>
                             </div>
 
-                            <div className="lg:flex-1/3 w-auto">
-                                <img src={tech.image} alt={tech.title} className="lg:flex-1/3 w-auto h-auto lg:h-[400px] bg-cover" />
-                            </div>
 
 
                         </div>

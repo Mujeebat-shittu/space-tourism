@@ -14,7 +14,7 @@ const Home = () => {
 
     return (
         <>
-            <div className="relative w-screen min-h-screen overflow-x-hidden bg-[#0B0D17]">
+            <div className="relative w-screen h-screen overflow-hidden bg-[#0B0D17]">
                 <div
                     className={`bg-cover bg-center absolute inset-0 
                    w-[100vh] lg:w-screen min-h-screen h-screen transform lg:transform-none rotate-90 lg:rotate-none overflow-hidden`}
