@@ -25,7 +25,13 @@ const Technology = () => {
     const { title } = useParams(); // "capsule", "spaceport", etc.
     const tech = title ? technologies[title as keyof typeof technologies] : undefined;
 
-    if (!tech) return <p>Not found</p>;
+      if (!tech)
+        return (
+            <div className="flex bg-gray-700 text-gray-100 gap-4 flex-col items-center justify-center h-screen">
+                <p className="text-2xl">Oops! Page Not found</p>
+                <p className="text-lg underline cursor-pointer "><Link to="/technology">Return to Main</Link></p>
+            </div>
+            );
 
     return (
         <>

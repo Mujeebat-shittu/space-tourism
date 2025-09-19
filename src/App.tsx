@@ -5,6 +5,7 @@
 
 import { Navigate, BrowserRouter, Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
+import NotFound from "./components/notfound";
 
 const Home = lazy(() => import("./components/home"));
 const Destination = lazy(() => import("./components/destination"));
@@ -14,7 +15,7 @@ const Technology = lazy(() => import("./components/technology"));
 function App() {
   return (
     <BrowserRouter>
-      <Suspense fallback={<div className="text-white">Loading...</div>}>
+      <Suspense fallback={<div className="text-black text-xl h-screen flex items-center justify-center">Loading...</div>}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/destination/:place" element={<Destination />} />
@@ -23,6 +24,7 @@ function App() {
           <Route path="/crew" element={<Navigate to="/crew/commander" replace />} />
           <Route path="/technology" element={<Navigate to="/technology/vehicle" replace />} />
           <Route path="/technology/:title" element={<Technology />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

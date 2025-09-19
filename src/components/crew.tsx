@@ -35,7 +35,13 @@ const Crew = () => {
     const { title } = useParams(); // "commander", "pilot", etc.
     const crew = title ? crews[title as keyof typeof crews] : undefined;
 
-    if (!crew) return <p>Not found</p>;
+    if (!crew)
+        return (
+            <div className="flex bg-gray-700 text-gray-100 gap-4 flex-col items-center justify-center h-screen">
+                <p className="text-2xl">Oops! Page Not found</p>
+                <p className="text-lg underline cursor-pointer "><Link to="/crew">Return to Main</Link></p>
+            </div>
+        );
 
     return (
         <>

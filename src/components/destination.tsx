@@ -38,11 +38,17 @@ const Destination = () => {
     const { place } = useParams(); // "moon", "mars", etc.
     const destination = place ? destinations[place as keyof typeof destinations] : undefined;
 
-    if (!destination) return <p>Not found</p>;
+    if (!destination)
+        return (
+            <div className="flex bg-gray-700 text-gray-100 gap-4 flex-col items-center justify-center h-screen">
+                <p className="text-2xl">Oops! Page Not found</p>
+                <p className="text-lg underline cursor-pointer "><Link to="/destination">Return to Main</Link></p>
+            </div>
+        );
 
     return (
         <>
-            
+
             <div className="relative w-full min-h-screen bg-[#0B0D17] bg-cover bg-center"
                 style={{ backgroundImage: "url('/assets/render2.webp')" }}>
 
